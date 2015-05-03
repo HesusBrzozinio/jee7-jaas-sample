@@ -146,6 +146,7 @@
                         <password>sa</password>
                     </security>
                 </datasource>
+				<!--SAMPLEAPP -->
                 <datasource jndi-name="java:jboss/datasources/SAMPLEAPPDS" pool-name="SAMPLEAPPDS" enabled="true" use-java-context="true">
                     <connection-url>jdbc:mysql://localhost:3306/sampleappsecurity</connection-url>
                     <driver>mysqlDriver</driver>
@@ -163,6 +164,7 @@
                     <driver name="h2" module="com.h2database.h2">
                         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
                     </driver>
+					<!--SAMPLEAPP -->
                     <driver name="mysqlDriver" module="com.mysql">
                         <xa-datasource-class>com.mysql.jdbc.Driver</xa-datasource-class>
                     </driver>
@@ -329,6 +331,7 @@
                         <policy-module code="Delegating" flag="required"/>
                     </authorization>
                 </security-domain>
+				<!--SAMPLEAPP -->
                 <security-domain name="secureDomain" cache-type="default">
                     <authentication>
                         <login-module code="Database" flag="required">
