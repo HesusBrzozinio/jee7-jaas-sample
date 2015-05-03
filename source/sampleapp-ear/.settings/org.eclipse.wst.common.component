@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="sampleapp-ear">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="sampleapp-web.war" deploy-path="/" handle="module:/resource/sampleapp-web/sampleapp-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sampleapp-core-0.1.0-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/sampleapp-core/sampleapp-core">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

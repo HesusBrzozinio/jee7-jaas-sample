@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition>
+		<div class="sidebar">
+		<ul class="nav nav-sidebar">
+			<li>
+				<h:link value="Panel Administracyjny" outcome="/admin/adminOnly" rendered="#{request.isUserInRole('Admin')}" />
+			</li>
+		</ul>
+		</div>
+	</ui:composition>
+
+</html>

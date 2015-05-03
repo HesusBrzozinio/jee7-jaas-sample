@@ -1,0 +1,118 @@
+@CHARSET "UTF8";
+
+html {
+    font-size: 10px;
+    font-family: sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+body {
+	padding-top: 45px;
+    background-color: #fff;
+    color: #333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 10px;
+    line-height: 1.42857;
+    margin: 0;
+}
+.logo-image {
+	float: left;
+	box-sizing: content-box;
+	width: 40px;
+	height: 40px;
+}
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 45px;
+  background-color: #3a5795;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAqCAMAAABFoMFOAAAAWlBMVEVOaaJDYJxCX5xBXptIZJ9MZ6E/XJpFYZ1KZqA9W5lGYp5HY55MaKFJZZ9LZqBEYZ1NaaJNaKJNaKFAXZtAXZpLZ6E+XJo+W5lJZaA9Wpk8Wpk8Wpg8WZg7WZj2xcGWAAAANElEQVR42lWGSQoAIBDDHCjo0f8/UxBxQDQuFwlpqgBZBq6+P+unVY1GnDgwqbD2zGz5e1lBdwvGGPE6OgAAAABJRU5ErkJggg==");
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+.navbar-header {
+    float: left;
+}
+.navbar-brand {
+    float: left;
+    height: 45px;
+    padding: 15px;
+    font-size: 18px;
+    line-height: 10px;
+}
+.navbar-right {
+    float: right !important;
+    width: auto;
+}
+.navbar-item {
+	height: 45px;
+}
+.navbar-item ul {
+	padding: 0px;
+	margin: 0px;
+}
+.navbar-item a {
+	font-size: 12px !important;
+	float: right;
+}
+.navbar-item a:hover {
+	font-size: 14px !important;
+}
+.navbar-item#list {
+	float: left;
+}
+.navbar-menu li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
+}
+.left-menu {
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    background-color: #F0F0F0;
+}
+.content {
+    width: 85%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    padding-right: 20px;
+}
+.nav-sidebar > .active > a, .nav-sidebar > .active > a:hover, .nav-sidebar > .active > a:focus {
+    color: #FFF;
+    background-color: #428BCA;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+a {
+    color: #D2D2D2;
+    text-decoration: none;
+    outline: 0;
+}
+a:link {
+    color: #D2D2D2;
+    text-decoration: none;
+}
+a:active {
+	color: orange;
+	text-decoration: none;
+}
+.nav {
+    list-style: outside none none;
+}
+.ui-growl {
+	top: 46px !important;
+}

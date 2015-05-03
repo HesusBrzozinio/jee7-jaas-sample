@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+
+	<ui:composition>
+			<div class="container-fluid nav">
+				<p:growl id="growl" globalOnly="true" autoUpdate="true" sticky="true" />
+				<p:tooltip />
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">HEADER</a>
+				</div> 
+				<div class="navbar-collapse">
+					<div class="navbar-right">
+						<ul >
+							<li>SOME ITEM</li>
+						</ul>
+						<h:form id="navbar-form">
+							<p:commandLink class="navbar-brand" id="ajax" update="growl" actionListener="#{mainPage.buttonAction}">
+        						<h:outputText value="Ajax Submit" />
+    						</p:commandLink>
+						</h:form>
+					</div>
+				</div>
+			</div>
+	</ui:composition>
+
+</html>

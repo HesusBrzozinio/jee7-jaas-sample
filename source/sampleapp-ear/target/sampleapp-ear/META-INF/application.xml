@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application PUBLIC
+	"-//Sun Microsystems, Inc.//DTD J2EE Application 1.3//EN"
+	"http://java.sun.com/dtd/application_1_3.dtd">
+<application>
+  <display-name>sampleapp-ear</display-name>
+  <description>Sampleapp deployable</description>
+  <module>
+    <web>
+      <web-uri>sampleapp-web.war</web-uri>
+      <context-root>/sampleapp-web</context-root>
+    </web>
+  </module>
+  <module>
+    <ejb>sampleapp-core-0.1.0-SNAPSHOT.jar</ejb>
+  </module>
+</application>

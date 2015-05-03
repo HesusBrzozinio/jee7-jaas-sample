@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:c="http://java.sun.com/jstl/core"
+	xmlns:fn="http://java.sun.com/jsp/jstl/functions"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view encoding="UTF-8" contentType="text/html">
+
+	<h:head>
+		<title>Sampleapp</title>
+		<f:facet name="first">
+			<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		</f:facet>
+		<f:facet name="last">
+			<h:outputStylesheet library="css" name="bootstrap-theme.min.css" target="head" />
+			<h:outputStylesheet library="css" name="main.css" target="head" />
+		</f:facet>
+	</h:head>
+
+	<h:body style="font-family: segoe ui,Arial,sans-serif;">
+		
+		<nav class="fixed-nav-bar">
+			<ui:include src="header.xhtml" />
+		</nav>
+		
+		<div id="navigation" class="left-menu">
+			<ui:include src="navigation.xhtml" />
+		</div>
+		
+		<div id="content" class="content">
+			<ui:insert name="body" />
+		</div>
+	</h:body>
+</f:view>
+</html>

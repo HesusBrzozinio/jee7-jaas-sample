@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition>
+	<h:form id="navbar-form">
+		<div class="container-fluid nav">
+			<p:growl id="growl" globalOnly="true" autoUpdate="true" />
+			<p:tooltip />
+			<div class="navbar-header">
+				<h:graphicImage library="images" name="hand.png"
+					styleClass="logo-image" />
+				<h:link styleClass="navbar-brand" value="Grab-a-Book"
+					outcome="/html/index" />
+			</div>
+			<div class="navbar-right">
+				<div id="list" class="navbar-item">
+					<ul class="navbar-menu">
+						<li><p:link id="login-link" class="navbar-brand"
+								outcome="/html/sys/admin/login-redirect" value="Zaloguj"
+								rendered="#{empty sysAuth.user}" /></li>
+						<li><p:commandLink id="logout-link" class="navbar-brand"
+								action="#{sysAuth.logout}" rendered="#{not empty sysAuth.user}">Wyloguj</p:commandLink></li>
+						<li><p:commandLink id="item1-link" class="navbar-brand"
+								actionListener="#{mainPage.buttonAction}">ITEM 1</p:commandLink></li>
+						<li><p:commandLink id="item2-link" class="navbar-brand"
+								actionListener="#{mainPage.buttonAction}">ITEM 2</p:commandLink></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</h:form>
+</ui:composition>
+
+</html>

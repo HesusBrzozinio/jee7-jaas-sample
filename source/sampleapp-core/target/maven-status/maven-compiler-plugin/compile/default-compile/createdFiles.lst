@@ -1,0 +1,3 @@
+model\dto\Car.class
+service\CarServiceBean.class
+service\CarServiceLocal.class

@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>pl.kb.sampleapp</groupId>
+	<artifactId>sampleapp</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>SAMPLEAPP</name>
+	<description>SAMPLEAPP</description>
+
+	<modules>
+		<module>sampleapp-core</module>
+		<module>sampleapp-ear</module>
+		<module>sampleapp-web</module>
+	</modules>
+
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<!-- add if needed -->
+			</properties>
+		</profile>
+	</profiles>
+
+	<build>
+		<defaultGoal>clean package</defaultGoal>
+		<pluginManagement>
+			<plugins>
+				<!-- add if needed -->
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<properties>
+		<project.build.targetJdk>1.8</project.build.targetJdk>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<!--
+	<repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>PrimeFaces Maven Repository</name>
+			<url>http://repository.primefaces.org</url>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>JBoss Repository</id>
+			<url>https://repository.jboss.org/nexus/content/groups/public/</url>
+		</repository>
+	</repositories>
+	-->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.jboss.spec</groupId>
+				<artifactId>jboss-javaee-7.0</artifactId>
+				<version>1.0.0.Final</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- 
+		<dependency> 
+			<groupId>org.jboss.spec.javax.ejb</groupId>
+			<artifactId>jboss-ejb-api_3.2_spec</artifactId> 
+			<scope>provided</scope> 
+		</dependency> -->
+		<!-- Import the CDI API -->
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- Import the Common Annotations API (JSR-250) -->
+		<!-- 
+		<dependency>
+			<groupId>org.jboss.spec.javax.annotation</groupId>
+			<artifactId>jboss-annotations-api_1.2_spec</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		-->
+		<!-- Import the Servlet API -->
+		<!-- 
+		<dependency>
+			<groupId>org.jboss.spec.javax.servlet</groupId>
+			<artifactId>jboss-servlet-api_3.1_spec</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		-->
+	</dependencies>
+
+</project>
